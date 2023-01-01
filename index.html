@@ -106,12 +106,10 @@
         var modelSize = 68.0; //millimeters
         var focalLength = 4.0; //millimeters
 
-        //euclideanDistance = Math.sqrt(((corners[0].x * corners[0].x) - (corners[1].x * corners[1].x)) + ((corners[0].y * corners[0].y) - (corners[1].y * corners[1].y)));
-        
         euclideanDistance = Math.sqrt(Math.pow((corners[0].x-corners[1].x), 2) + Math.pow((corners[0].y-corners[1].y), 2));
-        realDistance = ((modelSize * focalLength)/ euclideanDistance)
+        realDistance = 2*(10*((modelSize * focalLength)/ euclideanDistance))
         console.log(euclideanDistance + " in Pixels");
-        console.log(realDistance + " in Millimeters");
+        console.log(realDistance + " in Centimeter");
       }
     }
 
