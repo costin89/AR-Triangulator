@@ -100,8 +100,13 @@
         
         context.strokeStyle = "red";
         context.strokeRect(corners[0].x - 2, corners[0].y - 2, 4, 4);
+        // ab hier alex
         console.log(corners[0].x + " ; " + corners[0].y);
         console.log(corners[1].x + " ; " + corners[1].y);
+        var euclideanDistance, realDistance;
+        
+        euclideanDistance = Math.sqrt(Math.pow((corners[0].x * corners[1].x)2) + Math.pow((corners[0].y * corners[1].y)2)));
+        console.log(euclideanDistance + " in Pixels");
       }
     }
 
