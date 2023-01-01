@@ -9,7 +9,9 @@
   <script type="text/javascript" src="./aruco.js"></script> 
 
   <script>
-    var video, canvas, context, imageData, detector;
+    var video, canvas, context, imageData, detector, posit;
+    
+    var modelSize = 68.0; //millimeters
   
     function onLoad(){
       video = document.getElementById("video");
@@ -83,7 +85,7 @@
       for (i = 0; i !== markers.length; ++ i){
         corners = markers[i].corners;
         
-        context.strokeStyle = "red";
+        context.strokeStyle = "pink";
         context.beginPath();
         
         for (j = 0; j !== corners.length; ++ j){
