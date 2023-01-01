@@ -103,7 +103,7 @@
         //console.log(corners[1].x + " ; " + corners[1].y);
         
         var modelSize = 68.0; //millimeters
-        var focalLength = 72.0;
+        var focalLength = 2.0; //millimeters
 
         euclideanDistance = Math.sqrt(((corners[0].x * corners[0].x) - (corners[1].x * corners[1].x)) + ((corners[0].y * corners[0].y) - (corners[1].y * corners[1].y)));
         realDistance = ((modelSize * focalLength)/ euclideanDistance)
